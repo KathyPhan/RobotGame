@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimController : MonoBehaviour {
 
-    static Animator anim;
-   // public float speed = 2.0f;
-   // public float rotationSpeed = 75.0f;
+   static Animator anim;
 
 
     // Use this for initialization
@@ -16,23 +14,14 @@ public class PlayerAnimController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        // float translation = Input.GetAxis("Vertical") * speed;
-        // float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-        // translation *= Time.deltaTime;
-        // rotation *= Time.deltaTime;
-
-        // transform.Translate(0, 0, translation);
-        // transform.Rotate(0, rotation, 0);
-
-        //  if(translation != 0)
-        // {
-        //    anim.SetBool("IsWalking", true);
-        // }
-        // else
-        //{
-        //  anim.SetBool("IsWalking", false);
-        // }
+        if(Input.GetAxis("Horizontal") != 0)
+        {
+           anim.SetBool("isWalking", true);
+        }
+        else
+       {
+         anim.SetBool("isWalking", false);
+        }
 
 
         if (Input.GetMouseButtonDown(0))

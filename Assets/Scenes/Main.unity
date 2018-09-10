@@ -4568,8 +4568,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1d52958064d2548bb46634a087192d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matOfObject: {fileID: 0}
-  newcolo: {r: 0, g: 0.15806119, b: 0.6037736, a: 0}
+  matOfObject:
+  - {fileID: 2100000, guid: 2871ed64233de7548aa1d22a69bfb7a5, type: 2}
+  - {fileID: 2100000, guid: 20531cc5257c0a546ab6e8c8a9fcd0d2, type: 2}
+  - {fileID: 2100000, guid: 4ea01370ee494fd4bba1cd994de14ba8, type: 2}
+  - {fileID: 2100000, guid: 8bdfb0e6820546b41a1949893fdfe158, type: 2}
+  - {fileID: 2100000, guid: 1395c86b8419a7f4297eada806e82108, type: 2}
+  newcolor: {r: 0, g: 0.25836387, b: 0.7264151, a: 0}
+  ogColor: {r: 0.21960784, g: 0.28627452, b: 0.17254902, a: 1}
   changecolo: 46
 --- !u!114 &765877553 stripped
 MonoBehaviour:
@@ -6471,7 +6477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 382556164}
-  mainTimer: 300
+  mainTimer: 250
 --- !u!4 &985816667
 Transform:
   m_ObjectHideFlags: 0
@@ -9445,7 +9451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e0d23f766e49a294fb88dc71e854ee2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.59
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e0d23f766e49a294fb88dc71e854ee2b, type: 3}
       propertyPath: m_LocalPosition.z

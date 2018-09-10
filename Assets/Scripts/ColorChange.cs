@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour {
 
-    public Material matOfObject;
-    public Color newcolo;
+    public Material[] matOfObject;
+    public Color newcolor, ogColor;
     public KeyCode changecolo;
 
     void Start()
     {
-        matOfObject.color = Color.black;
+        for( int i = 0; i < matOfObject.Length; i++)
+        {
+            matOfObject[i].color = ogColor;
+        }
+        
     }
 
     void Update()
     {
         if(Input.GetKeyDown(changecolo))
         {
-            if(matOfObject.color == Color.black)
+            for(int i = 0; i < matOfObject.Length; i++)
             {
-                matOfObject.color = newcolo;
+                if(matOfObject[i].color == ogColor)
+                {
+                    matOfObject[i].color = newcolor;
+                }
+                else
+                {
+                    matOfObject[i].color = ogColor;
+                }
             }
-            else
-            {
-                matOfObject.color = Color.black;
-            }
+ 
         }
     }
 }
